@@ -8,7 +8,9 @@ jobs:
       - name: "Go Version"
         run: sudo go version
       - name: "Execute Go Program"
-        shell: GO111MODULE=off go run {0}
+        env:
+          GO111MODULE: off
+        shell: go run {0}
         run: |
           package main
           import "fmt"
