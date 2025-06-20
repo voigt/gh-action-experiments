@@ -15,10 +15,12 @@ jobs:
         run: ls -lah /home/runner/work/
       - name: "Go Env"
         run: sudo go env
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.24"
       - name: "Execute Go Program"
         env:
           GO111MODULE: off
-          GOPATH: "/root/go"
         shell: go run {0}
         run: |
           package main
