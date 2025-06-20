@@ -1,0 +1,17 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  experiment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Install Go"
+        run: sudo apt install -y golang
+      - name: "Execute Go Program"
+        shell: go run {0}
+        run: |
+          package main
+          import "fmt"
+          func main() {
+              fmt.Println("hello world")
+          }
