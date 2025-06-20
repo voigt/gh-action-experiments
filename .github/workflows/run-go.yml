@@ -7,8 +7,6 @@ jobs:
     steps:
       - name: "Go Version"
         run: sudo go version
-      - name: "Install Go"
-        run: sudo apt update && sudoapt install -y golang
       - name: "Execute Go Program"
         shell: go run {0}
         run: |
