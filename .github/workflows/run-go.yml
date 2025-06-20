@@ -7,6 +7,8 @@ jobs:
     steps:
       - name: "Go Version"
         run: sudo go version
+      - name: "Go Env"
+        run: sudo go env
       - name: "Execute Go Program"
         env:
           GO111MODULE: off
