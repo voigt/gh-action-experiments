@@ -16,6 +16,8 @@ jobs:
           go-version: "1.24"
       - name: "Go Env"
         run: sudo go env
+      - name: "Go Env"
+        run: sudo go mod init
       - name: "Execute Go Program"
         env:
           GO111MODULE: off
