@@ -9,11 +9,16 @@ jobs:
         uses: actions/checkout@v4
       - name: "Go Version"
         run: sudo go version
+      - name: "Go Version"
+        run: tree /home/runner/work/
+      - name: "Go Version"
+        run: ls -lah /home/runner/work/
       - name: "Go Env"
         run: sudo go env
       - name: "Execute Go Program"
         env:
           GO111MODULE: off
+          GOPATH: /home/runner/work/voigt/go
         shell: go run {0}
         run: |
           package main
