@@ -10,6 +10,7 @@ jobs:
       - name: "Execute Go Program"
         env:
           GO111MODULE: off
+          GOPATH: "."
         shell: go run {0}
         run: |
           package main
