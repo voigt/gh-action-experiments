@@ -11,9 +11,9 @@ jobs:
         run: sudo go version
       - name: "Go Env"
         run: sudo go env
-      - name: "Go Env"
-        run: sudo go mod init
       - name: "Execute Go Program"
+        env:
+          GO111MODULE: off
         shell: go run {0}
         run: |
           package main
